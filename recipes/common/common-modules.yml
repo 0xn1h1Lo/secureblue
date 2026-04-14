@@ -12,7 +12,7 @@
 
 modules:
     - type: script
-      source: ghcr.io/blue-build/modules@sha256:8e92fcaaef385a1728b8d8224296484260b67126ac83f7ed85b4ae3dde4ad19d
+      source: ghcr.io/blue-build/modules@sha256:079ae754f5b57e8f2ca5850b33a633b3fe1c37f4be51e7b00e9250a997f4e334
       scripts:
         - addrepos.sh
         - createautostartdir.sh
@@ -22,7 +22,7 @@ modules:
         - installpinnedkernel.sh
     - from-file: common/common-packages.yml
     - type: files
-      source: ghcr.io/blue-build/modules@sha256:8e92fcaaef385a1728b8d8224296484260b67126ac83f7ed85b4ae3dde4ad19d
+      source: ghcr.io/blue-build/modules@sha256:079ae754f5b57e8f2ca5850b33a633b3fe1c37f4be51e7b00e9250a997f4e334
       files:
         - source: system/usr
           destination: /usr
@@ -30,12 +30,12 @@ modules:
           destination: /etc
     - from-file: common/common-scripts.yml
     - type: justfiles
-      source: ghcr.io/blue-build/modules@sha256:8e92fcaaef385a1728b8d8224296484260b67126ac83f7ed85b4ae3dde4ad19d
+      source: ghcr.io/blue-build/modules@sha256:079ae754f5b57e8f2ca5850b33a633b3fe1c37f4be51e7b00e9250a997f4e334
       validate: true
       include:
         - common
     - type: script
-      source: ghcr.io/blue-build/modules@sha256:8e92fcaaef385a1728b8d8224296484260b67126ac83f7ed85b4ae3dde4ad19d
+      source: ghcr.io/blue-build/modules@sha256:079ae754f5b57e8f2ca5850b33a633b3fe1c37f4be51e7b00e9250a997f4e334
       scripts:
         - signkernel.sh
       secrets:
